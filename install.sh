@@ -1,3 +1,6 @@
+actionInputs()
+getInput()
+
 echo "Install DongTai For Project: ${{ inputs.project-name }}"
 echo "Install DongTai For Project: $INPUTS_PROJECT_NAME"
 
