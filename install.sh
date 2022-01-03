@@ -6,8 +6,7 @@ if [ "$DONGTAI_DEBUG"=="false" ];then
 else
     echo "debug mode"
 fi
-
-echo JAVA_TOOL_OPTIONS="\"-javaagent:/tmp/agent.jar -Dproject.create=$PROJECT_CREATE -Dproject.name=$PROJECT_NAME -Dproject.version=$PROJECT_VERSION\"" >> ~/.bash_profile
+echo "export JAVA_TOOL_OPTIONS=\"-javaagent:/tmp/agent.jar -Dproject.create=$PROJECT_CREATE -Dproject.name=$PROJECT_NAME -Dproject.version=$PROJECT_VERSION\"" >> ~/.bash_profile
 echo "Install Successful."
 
 echo "::set-output name=agent-env::$JAVA_TOOL_OPTIONS"
