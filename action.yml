@@ -26,14 +26,12 @@ inputs:
     required: true
     default: "${{ github.event_name }}-${{ github.run_number }}"
 outputs:
-  random-number:
+  JAVA_TOOL_OPTIONS:
     description: "Random number"
-    value: ${{ steps.random-number-generator.outputs.random-id }}
 runs:
   using: "composite"
   steps:
     - run: ${{ github.action_path }}/install.sh
-      shell: bash
       env:
         DONGTAI_SERVER: ${{ inputs.dongtai-server }}
         DONGTAI_TOKEN: ${{ inputs.dongtai-token }}
@@ -42,4 +40,3 @@ runs:
         PROJECT_CREATE: ${{ inputs.project-create }}
         PROJECT_VERSION: ${{ inputs.project-version }}
     - run: echo "Install Finished. Project ENV is: $JAVA_TOOL_OPTIONS"
-      shell: bash
