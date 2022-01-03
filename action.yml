@@ -42,3 +42,5 @@ runs:
         PROJECT_NAME: ${{ inputs.project-name }}
         PROJECT_CREATE: ${{ inputs.project-create }}
         PROJECT_VERSION: ${{ inputs.project-version }}
+    
+    - run: cat ~/.profile
