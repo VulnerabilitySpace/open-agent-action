@@ -42,11 +42,3 @@ runs:
         PROJECT_NAME: ${{ inputs.project-name }}
         PROJECT_CREATE: ${{ inputs.project-create }}
         PROJECT_VERSION: ${{ inputs.project-version }}
-
-    - run: |
-        source ~/.bash_profile
-        echo "Install Successful."
-      shell: bash
-
-    - run: echo $JAVA_TOOL_OPTIONS
-      shell: bash
