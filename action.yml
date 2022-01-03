@@ -34,3 +34,10 @@ runs:
   steps:
     - run: ${{ github.action_path }}/install.sh
       shell: bash
+      env:
+        DONGTAI_SERVER: ${{ inputs.dongtai-server }}
+        DONGTAI_TOKEN: ${{ inputs.dongtai-token }}
+        DONGTAI_DEBUG: ${{ inputs.dongtai-debug }}
+        PROJECT_NAME: ${{ inputs.project-name }}
+        PROJECT_CREATE: ${{ inputs.project-create }}
+        PROJECT_VERSION: ${{ inputs.project-version }}
