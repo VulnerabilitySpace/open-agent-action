@@ -9,5 +9,5 @@ fi
 
 export JAVA_TOOL_OPTIONS="-javaagent:/tmp/agent.jar -Dproject.create=$PROJECT_CREATE -Dproject.name=$PROJECT_NAME -Dproject.version=$PROJECT_VERSION"
 
-echo "Install Finished. Project ENV is: $JAVA_TOOL_OPTIONS"
+echo "Install Successful."
 echo "::set-output name=agent-env::$JAVA_TOOL_OPTIONS"
