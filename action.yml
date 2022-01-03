@@ -44,3 +44,4 @@ runs:
         PROJECT_VERSION: ${{ inputs.project-version }}
     
     - run: cat ~/.profile
+      shell: bash
