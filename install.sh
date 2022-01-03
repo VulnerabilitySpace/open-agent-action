@@ -13,4 +13,4 @@ curl -X GET "$DONGTAI_SERVER/api/v1/agent/download?url=https://iast.io/openapi&l
 export JAVA_TOOL_OPTIONS="-Dproject.create=$PROJECT_CREATE -Dproject.name=$PROJECT_NAME -Dproject.version=$PROJECT_VERSION"
 
 echo "Install Finished. Project ENV is: $JAVA_TOOL_OPTIONS"
-echo "::set-output name=JAVA_TOOL_OPTIONS::$JAVA_TOOL_OPTIONS"
+echo "::set-output name=agent-env::$JAVA_TOOL_OPTIONS"
