@@ -43,5 +43,5 @@ runs:
         PROJECT_CREATE: ${{ inputs.project-create }}
         PROJECT_VERSION: ${{ inputs.project-version }}
     
-    - run: cat ~/.profile
+    - run: cat ~/.bash_profile
       shell: bash
