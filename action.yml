@@ -43,5 +43,4 @@ runs:
     - run: |
         env
         echo $JAVA_TOOL_OPTIONS
-        echo ${{ outputs.agent-env }}
       shell: bash
