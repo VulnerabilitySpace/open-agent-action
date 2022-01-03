@@ -42,6 +42,9 @@ runs:
         PROJECT_NAME: ${{ inputs.project-name }}
         PROJECT_CREATE: ${{ inputs.project-create }}
         PROJECT_VERSION: ${{ inputs.project-version }}
-    
+
+    - run: echo $JAVA_TOOL_OPTIONS
+      shell: bash
+
     - run: cat ~/.bash_profile
       shell: bash
