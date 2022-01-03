@@ -8,6 +8,4 @@ else
 fi
 
 echo JAVA_TOOL_OPTIONS="\"-javaagent:/tmp/agent.jar -Dproject.create=$PROJECT_CREATE -Dproject.name=$PROJECT_NAME -Dproject.version=$PROJECT_VERSION\"" >> ~/.bash_profile
-source ~/.bash_profile
-echo "Install Successful."
 echo "::set-output name=agent-env::$JAVA_TOOL_OPTIONS"
