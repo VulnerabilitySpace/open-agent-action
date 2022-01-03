@@ -1,27 +1,27 @@
 name: 'Install DongTai Java Agent'
 description: 'Greet someone'
 inputs:
-  DONGTAI_SERVER:
+  dongtai-server:
     description: 'Whether to enable the debugging mode, the debugging mode will use the local jar package'
     required: true
     default: "https://iast.io/openapi"
-  DONGTAI_TOKEN:
+  dongtai-token:
     description: 'Whether to enable the debugging mode, the debugging mode will use the local jar package'
     required: true
     default: "79798299b48839c84886d728958a8f708e119868"
-  DONGTAI_DEBUG:
+  dongtai-debug:
     description: 'Whether to enable the debugging mode, the debugging mode will use the local jar package'
     required: true
     default: false
-  PROJECT_NAME:  # id of input
+  project-name:  # id of input
     description: 'The name of the project to install DongTai'
     required: true
     default: '${{ github.repository }}'
-  PROJECT_CREATE:
+  project-create:
     description: ''
     required: true
     default: 'true'
-  PROJECT_VERSION:
+  project-version:
     description: ''
     required: true
     default: "${{ github.event_name }}-${{ github.run_number }}"
@@ -32,9 +32,5 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: "echo 'start to install open-agent'"
-      shell: bash
     - run: ${{ github.action_path }}/install.sh
-      shell: bash
-    - run: "echo 'finished. env: $JAVA_TOOL_OPTIONS"
       shell: bash
