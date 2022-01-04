@@ -1,28 +1,32 @@
 name: 'Install DongTai Java Agent'
-description: 'Greet someone'
+description: 'Install DongTai Java Agent to .bash_profile、.bashrc'
+author: "Owefsad"
+branding:
+  icon: "alert-triangle"
+  color: "yellow"
 inputs:
   dongtai-server:
-    description: 'Whether to enable the debugging mode, the debugging mode will use the local jar package'
+    description: 'DongTai Server Address'
     required: true
     default: "https://iast.io/openapi"
   dongtai-token:
-    description: 'Whether to enable the debugging mode, the debugging mode will use the local jar package'
+    description: 'Auth token for DongTai Server'
     required: true
     default: "79798299b48839c84886d728958a8f708e119868"
   dongtai-debug:
     description: 'Whether to enable the debugging mode, the debugging mode will use the local jar package'
     required: true
     default: false
-  project-name:  # id of input
-    description: 'The name of the project to install DongTai'
+  project-name:
+    description: 'The name of the project'
     required: true
     default: '${{ github.repository }}'
   project-create:
-    description: ''
+    description: 'Whether to automatically create a project, default: true'
     required: true
     default: 'true'
   project-version:
-    description: ''
+    description: 'The version of the project'
     required: true
     default: "${{ github.event_name }}-${{ github.run_number }}"
 outputs:
