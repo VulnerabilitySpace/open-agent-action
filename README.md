@@ -70,7 +70,7 @@ jobs:
           java-version: 1.8
           architecture: x86
       
-      - name: Run Example
+      - name: Run Automated Testing
         run: |
           java -version
           bash ${{ github.workspace }}/.github/scripts/run-example.sh
